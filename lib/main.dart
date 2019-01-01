@@ -1,24 +1,28 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
+import './pages/home.dart';
 
-import './product_manager.dart';
+void main() {
+// debugPaintSizeEnabled = true;
+// debugPaintBaselinesEnabled = true;
+// debugPaintPointersEnabled = true;
 
-void main() => runApp(MyApp());
+
+  runApp(MyApp());
+}
 
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      // debugShowMaterialGrid: true,
       theme: ThemeData(
         brightness: Brightness.light,
         primarySwatch: Colors.deepOrange,
         accentColor: Colors.deepPurple,
       ),
-      home: Scaffold(
-        appBar: AppBar(
-          title: Text('EasyList'),
-        ),
-        body: ProductManager(startingProduct: 'hello bro'),
-      ),
+      home: HomePage(),
     );
   }
 }
