@@ -4,7 +4,7 @@ class ProductPage extends StatelessWidget {
   final String title;
   final String imageUrl;
 
- ProductPage(this.title, this.imageUrl);
+  ProductPage(this.title, this.imageUrl);
 
   @override
   Widget build(BuildContext context) {
@@ -12,26 +12,23 @@ class ProductPage extends StatelessWidget {
       appBar: AppBar(
         title: Text(title),
       ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: <Widget>[
-            Image.asset(imageUrl),
-            Container(
-              padding: EdgeInsets.all(10.0),
-              child: Text(title),
+      body: Column(
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: <Widget>[
+          Image.asset(imageUrl),
+          Container(
+            padding: EdgeInsets.all(10.0),
+            child: Text(title),
+          ),
+          Container(
+            padding: EdgeInsets.all(10.0),
+            child: RaisedButton(
+              color: Theme.of(context).accentColor,
+              child: Text('BACK'),
+              onPressed: () => Navigator.pop(context),
             ),
-            Container(
-              padding: EdgeInsets.all(10.0),
-              child: RaisedButton(
-                color: Theme.of(context).accentColor,
-                child: Text('Back'),
-                onPressed: () => Navigator.pop(context),
-              ),
-            ),
-          ],
-        ),
+          )
+        ],
       ),
     );
   }

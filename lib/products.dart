@@ -23,13 +23,13 @@ class Products extends StatelessWidget {
                 onPressed: () => Navigator.push(
                       context,
                       MaterialPageRoute(
-                          builder: (BuildContext context) => ProductPage(
-                            products[index]['title'],products[index]['image']),
-                            ),
+                        builder: (BuildContext context) => ProductPage(
+                            products[index]['title'], products[index]['image']),
+                      ),
                     ),
               )
             ],
-          ),
+          )
         ],
       ),
     );
@@ -40,25 +40,17 @@ class Products extends StatelessWidget {
     if (products.length > 0) {
       productCards = ListView.builder(
         itemBuilder: _buildProductItem,
-        // _buildProductItem function is called without parathesis to not get execute instantly
         itemCount: products.length,
       );
     } else {
-      // productCards = Container();
-      /* Above line is used when you don't want to render anything
-     else we get error on the screenn*/
-
-      productCards = Center(
-        child: Text('No product found, please add some'),
-      );
+      productCards = Container();
     }
-
     return productCards;
   }
 
   @override
   Widget build(BuildContext context) {
-    print('[Products Widget] Build()');
+    print('[Products Widget] build()');
     return _buildProductList();
   }
 }
