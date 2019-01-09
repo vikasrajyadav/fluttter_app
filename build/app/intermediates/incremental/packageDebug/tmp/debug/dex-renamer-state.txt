@@ -1,4 +1,4 @@
-#Sun Jan 06 06:56:23 IST 2019
+#Thu Jan 10 02:55:36 IST 2019
 base.0=D\:\\git\\flutter\\app\\build\\app\\intermediates\\transforms\\dexMerger\\debug\\0
 path.0=classes.dex
 renamed.0=classes.dex

@@ -5,6 +5,7 @@ class Product {
   final String description;
   final double price;
   final String image;
+
   Product(
       {@required this.title,
       @required this.description,
