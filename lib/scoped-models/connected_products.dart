@@ -307,7 +307,7 @@ mixin UserModel on ConnectedProductsModel {
       final String userEmail = prefs.getString('userEmail');
       final String userId = prefs.getString('userId');
       final int tokenLifespan = parsedExpiryTime.difference(now).inSeconds;
-      _a uthenticatedUser = User(id: userId, email: userEmail, token: token);
+      _authenticatedUser = User(id: userId, email: userEmail, token: token);
       _userSubject.add(true);
       setAuthTimeout(tokenLifespan);
       notifyListeners();
