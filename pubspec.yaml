@@ -1,4 +1,4 @@
-name: flutter_course
+name: app
 description: A new Flutter project.
 
 dependencies:
@@ -12,7 +12,9 @@ dependencies:
   http: "^0.11.3+16"
   shared_preferences: "^0.4.3"
   rxdart: "^0.20.0"
-  # map_view: "^0.0.12"
+  # map_view: "^0.0.14"
+  # location: ^1.4.1
+  # image_picker: "^0.4.5"
 
 dev_dependencies:
   flutter_test:
